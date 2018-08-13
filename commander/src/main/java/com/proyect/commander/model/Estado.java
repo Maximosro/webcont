@@ -1,34 +1,41 @@
 package com.proyect.commander.model;
 
+import java.util.Map;
+
 public class Estado {
-	int id;
-	String nombre;
-	String urlBanner;
-	int tFrontera;
-	String frontera;
-	int tGob;
-	String gobierno;
-	String linkLeader;
-	String linkMofa;
-	int salMin;
-	int pib;
+
+	private int id;
+	private String nombre;
+	private String urlBanner;
+	private int tFrontera;
+	private String frontera;
+	private int tGob;
+	private String gobierno;
+	private String linkLeader;
+	private String linkMofa;
+	private int salMin;
+	private int pib;
+	private Map<Integer, Region> listaRegiones;
 
 	public Estado() {
 		super();
 	}
-
-	public Estado(int id, String nombre, String urlBanner, int tFrontera, int tGob, String linkLeader, String linkMofa,
-			int salMin, int pib) {
+	
+	public Estado(int id, String nombre, String urlBanner, int tFrontera, String frontera, int tGob, String gobierno,
+			String linkLeader, String linkMofa, int salMin, int pib, Map<Integer, Region> listaRegiones) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.urlBanner = urlBanner;
 		this.tFrontera = tFrontera;
+		this.frontera = frontera;
 		this.tGob = tGob;
+		this.gobierno = gobierno;
 		this.linkLeader = linkLeader;
 		this.linkMofa = linkMofa;
 		this.salMin = salMin;
 		this.pib = pib;
+		this.listaRegiones = listaRegiones;
 	}
 
 	public int getId() {
@@ -117,6 +124,14 @@ public class Estado {
 
 	public void setGobierno(String gobierno) {
 		this.gobierno = gobierno;
+	}
+
+	public Map<Integer, Region> getListaRegiones() {
+		return listaRegiones;
+	}
+
+	public void setListaRegiones(Map<Integer, Region> listaRegiones) {
+		this.listaRegiones = listaRegiones;
 	}
 
 }
