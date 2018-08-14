@@ -8,6 +8,7 @@ public class Region {
 	private int idResource;
 	private String nombreResource;
 	private int idForeingState;
+	private int isFreeRegion;
 	
 	public Region() {
 		super();
@@ -21,6 +22,14 @@ public class Region {
 		this.idResource = idResource;
 		this.nombreResource = nombreResource;
 		this.idForeingState = idForeingState;
+	}
+
+	public int getIsFreeRegion() {
+		return isFreeRegion;
+	}
+
+	public void setIsFreeRegion(int isFreeRegion) {
+		this.isFreeRegion = isFreeRegion;
 	}
 
 	public int getId() {
